@@ -52,7 +52,7 @@ stop_front:
 	@-pkill -SIGTERM -f "gostripe -port=${GOSTRIPE_PORT}"
 	@echo "Stopped front end"
 
-## stop_back: stops the back end
+## stop_back: stops the back end.
 stop_back:
 	@echo "Stopping the back end..."
 	@-pkill -SIGTERM -f "gostripe_api -port=${API_PORT}"
