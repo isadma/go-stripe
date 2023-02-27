@@ -106,9 +106,11 @@
                             data = JSON.parse(response);
                             console.log(data);
                             stripe.confirmCardPayment(data.client_secret, {
-                                card: card,
-                                billing_details: {
-                                    name: document.getElementById("cardholder-name").value
+                                payment_method: {
+                                    card: card,
+                                    billing_details: {
+                                        name: document.getElementById("cardholder-name").value
+                                    }
                                 }
                             }).then(function(result){
                                 if(result.error){
