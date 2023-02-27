@@ -129,7 +129,7 @@
                         }
                         catch (err){
                             console.log(err);
-                            showCardError(err.message);
+                            showCardError("Invalid response from payment gateway");
                             showPayButtons();
                         }
                     });
