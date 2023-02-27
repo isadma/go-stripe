@@ -1,0 +1,16 @@
+{{template "base" .}}
+
+{{define "title"}}
+    Payment Success
+{{end}}
+
+{{define "content"}}
+    <h2>Payment Success</h2>
+    <hr>
+    <p>>Name: {{index .Data "name"}}</p>
+    <p>>Email: {{index .Data "email"}}</p>
+    <p>>Amount: {{index .Data "payment_amount"}}</p>
+    <p>>Currency: {{index .Data "payment_currency"}}</p>
+    <p>>Method: {{index .Data "payment_method"}}</p>
+    <p>>Intent: {{index .Data "payment_intent"}}</p>
+{{end}}

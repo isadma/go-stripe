@@ -9,7 +9,8 @@ import (
 func (app *application) routes() http.Handler {
 	mux := chi.NewRouter()
 
-	mux.Get("/virtual-terminal", app.VirtualTerminal)
+	mux.Get("/", app.Payment)
+	mux.Get("/success", app.PaymentSuccess)
 
 	return mux
 }
