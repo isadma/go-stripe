@@ -6,14 +6,14 @@ DSN=root@tcp(localhost:3306)/widgets?parseTime=true&tls=false
 
 ## build: builds all binaries
 build: clean build_front build_back
-	@printf "All binaries built!\n"
+	@printf "All binaries are built!\n"
 
 ## clean: cleans all binaries and runs go clean
 clean:
 	@echo "Cleaning..."
 	@- rm -f dist/*
 	@go clean
-	@echo "Cleaned!"
+	@echo "Successfully cleaned!"
 
 ## build_front: builds the front end
 build_front:
