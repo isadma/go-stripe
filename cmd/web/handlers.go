@@ -39,3 +39,9 @@ func (app *application) PaymentSuccess(w http.ResponseWriter, r *http.Request) {
 		app.errorLog.Println(err)
 	}
 }
+
+func (app *application) Buy(w http.ResponseWriter, r *http.Request) {
+	if err := app.renderTemplate(w, r, "buy", nil); err != nil {
+		app.errorLog.Println(err)
+	}
+}
